@@ -8,7 +8,7 @@ class DevelopmentTimesController < ApplicationController
 	end
 
 	def create
-		dev_time = DevelopmentTime.new
-		dev_time
+		dev_time = DevelopmentTime.new(params[:development_time])
+		dev_time.save
 	end
 end
