@@ -1,13 +1,24 @@
 <h1>new development time</h1>
 <%= form_for @dev_time, :url => { :action => "create" }, :html => {:class => "dev_time_form"} do |f| %>
-  film: <%= f.collection_select :film_id, Film.all, :id, :name %>
-  developer: <%= f.collection_select :developer_id, Developer.all, :id, :name %>
+	<p>
+	  film: <%= f.collection_select :film_id, Film.all, :id, :name %>
+	  iso shot at: <%= f.text_field :iso, :class => "iso" %>
+	</p>
+	<p>
+	  developer: <%= f.collection_select :developer_id, Developer.all, :id, :name %>
+	  dillution: <%= f.text_field :dillution, :class => "dillution" %>
+	</p>
+	<p>
+	  temperature: <%= f.text_field :temperature, :class => "temperature" %>C
+	</p>
+	<p>
+	  time: <%= f.text_field :seconds, :class => "time" %> seconds
+	</p>
 
-  time: <%= f.text_field :seconds %>
-  dillution: <%= f.text_field :dillution %>
-  iso: <%= f.text_field :iso %>
-  temperature: <%= f.text_field :temperature %>
-  notes: <%= f.text_field :notes %>
-  rating: <%= f.text_field :rating %>
-  <%= f.submit "Create" %>
+
+	<p>
+	  rating: <%= f.text_field :rating, :class => "rating" %>
+	  notes: <%= f.text_field :notes %>
+	</p>  
+	<%= f.submit "Create" %>
 <% end %>

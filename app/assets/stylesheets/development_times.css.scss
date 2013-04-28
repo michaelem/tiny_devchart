@@ -1,3 +1,27 @@
 // Place all the styles related to the DevelopmentTime controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.iso {
+	width: 5em;
+	text-align: right;
+}
+
+.dillution {
+	width: 5em;
+}
+
+.temperature {
+	width: 2em;
+	text-align: right;
+}
+
+.time {
+	width: 4em;
+	text-align: right;
+}
+
+.rating {
+	width: 2em;
+	text-align: right;
+}
