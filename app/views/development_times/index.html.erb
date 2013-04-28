@@ -1,1 +1,39 @@
-<%= @dev_times.to_yaml %>
+<div class="main">
+<h1>The <span class="focus">Tiny</span> Dev Chart</h1>
+
+
+<table class="dev_time_table">
+	<thead>
+		<tr>
+			<th>
+				film
+			</th>
+			<th>
+				iso
+			</th>
+			<th>
+				developer
+			</th>
+			<th>
+				dillution
+			</th>
+			<th>
+				time
+			</th>
+			<th>
+				temperature
+			</th>
+			<th>
+				notes
+			</th>
+			<th>
+				rating
+			</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<%= render @dev_times %>
+	</tbody>
+</table>
+</div>
