@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.input {
+	float: right;
+}
+
 .iso {
 	width: 5em;
 	text-align: right;
@@ -16,6 +20,10 @@
 	text-align: right;
 }
 
+.dev_time_form {
+	size: 10;
+}
+
 .time {
 	width: 4em;
 	text-align: right;
@@ -24,4 +32,48 @@
 .rating {
 	width: 2em;
 	text-align: right;
+}
+
+#new_dev_time {
+		padding: 1em;
+		width: 100%;
+		font-size: 1em;
+}
+
+
+@media only screen and (min-width : 800px) {
+
+	#new_dev_time {
+		width: 17em;
+		padding: 1em;
+		margin: auto;
+		border: 1px solid grey;
+		box-shadow: 1em 1em 1em silver;
+		border-radius: 0.5em;
+	}
+}
+
+
+
+
+#new_dev_time hr {
+
+}
+
+
+
+.notes {
+	background: lightyellow;
+	width: 20em;
+}
+
+.create_button_container {
+	overflow: hidden;
+}
+
+.create_button {
+	float: right;
+	clear: both;
+	font-size: 1em;
+	font-family:  'Noto Serif';
 }
