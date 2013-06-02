@@ -1,0 +1,9 @@
+<h1>The <span class="focus">Tiny</span> Dev Chart</h1>
+enter a film or developer:
+
+<% form_tag development_times_path, :action => 'search' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "search", :name => nil %>
+  </p>
+<% end %>
