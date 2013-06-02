@@ -27,12 +27,13 @@ h1 .focus {
 
 .main {
 	margin-left: auto;
-    margin-right: auto;
-    width: 42em;
+  margin-right: auto;
+  width: 42em;
 }
 
 .dev_time_table {
 	text-align: left;
+	width: 100%;
 }
 
 .dev_time_table th {
@@ -42,4 +43,8 @@ h1 .focus {
 
 .dev_time_table td {
 	padding-right: 1em;
+}
+
+.table_add_link {
+	float: right;
 }
