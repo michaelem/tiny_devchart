@@ -1,7 +1,5 @@
 <h1>new developer</h1>
 <%= form_for @developer, :html => {:class => "film_form"} do |f| %>
-  name: <%= f.text_field :name %>
-  brand: <%= f.text_field :brand %>
-
-  <%= f.submit "Create" %>
+  Name: <%= f.association :name %>
+  Brand: <%= f.text_field :brand %>
 <% end %>

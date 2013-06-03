@@ -1,0 +1,15 @@
+<%= simple_form_for development_time do |f| %>
+  <%= f.association :film, include_blank: false, input_html: { class: "film" }  %>
+  <%= f.input :iso, placeholder: "100", input_html: { class: "iso" }  %>
+  <hr>
+  <%= f.association :developer, include_blank: false, input_html: { class: "developer" }  %>
+  <%= f.input :dillution, placeholder: "H", input_html: { class: "dillution" }  %>
+  <%= f.input :temperature, placeholder: "20", input_html: { class: "temperature" }  %> ℃
+  <hr>
+  <%= f.input :seconds, placeholder: "300", input_html: { class: "time" }  %> seconds
+  <hr>
+  <%= f.input :rating, placeholder: "5", input_html: { class: "rating" } %>
+  <%= f.input :notes %>
+
+  <%= f.submit "Create", class: "btn pull-right" %>
+<% end %>

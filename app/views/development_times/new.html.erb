@@ -1,44 +1,5 @@
 <h1>new development time</h1>
 
 <div id="new_dev_time">
-<%= form_for @dev_time, :url => { :action => "create" }, :html => {:class => "dev_time_form"} do |f| %>
-	<p>
-	  Film: <%= f.collection_select  :film_id, Film.all, :id, :name, {}, {:class=>'input'} %>
-	</p>
-	<p>
-	  ISO shot at: <%= f.text_field :iso, :class => "iso input", :placeholder => "400"%>
-	</p>
-
-	<hr>
-
-	<p>
-	  Developer: <%= f.collection_select :developer_id, Developer.all, :id, :name, {}, {:class=>'input'} %>
-	</p>
-	<p>
-	  Dillution: <%= f.text_field :dillution, :class => "dillution input", :placeholder => "H" %>
-	</p>
-
-	<p>
-	  Temperature: <%= f.text_field :temperature, :class => "temperature input", :placeholder => "20" %> ℃
-	</p>
-
-	<hr>
-
-	<p>
-	  Time: <%= f.text_field :seconds, :class => "time input", :placeholder => "420" %> seconds
-	</p>
-
-	<hr>
-
-	<p>
-	  Rating: <%= f.text_field :rating, :class => "rating input",  :placeholder => "5" %>
-	</p>
-
-	<p>
-	  Notes: <%= f.text_field :notes, :class => "notes input" %>
-	</p>  
-	<div class="create_button_container">
-		<%= f.submit "Create", :class => "create_button" %>
-	</div>
-<% end %>
+<%= render 'form', development_time: @dev_time %>
 </div>
