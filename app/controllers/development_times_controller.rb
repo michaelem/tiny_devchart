@@ -11,4 +11,7 @@ class DevelopmentTimesController < ApplicationController
 		dev_time = DevelopmentTime.new(params[:development_time])
 		dev_time.save
 	end
+
+	def search
+	end
 end
