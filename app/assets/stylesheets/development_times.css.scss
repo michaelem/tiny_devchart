@@ -32,7 +32,7 @@
 }
 
 .temperature {
-	width: 2em;
+	width: 3em;
 	text-align: right;
 }
 
@@ -66,6 +66,8 @@
 		border: 1px solid grey;
 		box-shadow: 1em 1em 1em silver;
 		border-radius: 0.5em;
+		margin-bottom: 5em;
+
 	}
 }
 
@@ -75,8 +77,6 @@
 #new_dev_time hr {
 
 }
-
-
 
 .notes {
 	background: lightyellow;
