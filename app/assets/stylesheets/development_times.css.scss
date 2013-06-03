@@ -2,8 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.input {
-	float: right;
+.dev_time_table {
+  text-align: left;
+  width: 100%;
+}
+
+.dev_time_table th {
+  padding-right: 1em;
+  color: darkred;
+  padding-bottom: 1em;
+}
+
+.dev_time_table td {
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+
+.table_add_link {
+  float: right;
 }
 
 .iso {
@@ -37,14 +53,14 @@
 #new_dev_time {
 		padding: 1em;
 		width: 100%;
-		font-size: 1em;
+		font-size: 0.8em;
 }
 
 
 @media only screen and (min-width : 800px) {
 
 	#new_dev_time {
-		width: 17em;
+		width: 20em;
 		padding: 1em;
 		margin: auto;
 		border: 1px solid grey;
