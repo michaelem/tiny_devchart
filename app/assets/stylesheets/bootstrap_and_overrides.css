@@ -15,7 +15,7 @@ h1 {
   font-family: 'Noto Serif', serif;
   font-style: italic;
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   padding: 0.7em;
 }
 
@@ -27,5 +27,13 @@ h1 .focus {
   margin-left: auto;
   margin-right: auto;
   width: 43em;
+  padding: 1em;
+}
+
+.base_form {
+  margin: auto;
+  width: 11em;
+  border: 1px solid darkred;
+  border-radius: 1em;
   padding: 1em;
 }
