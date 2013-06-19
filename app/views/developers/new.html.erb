@@ -1,5 +1,2 @@
 <h1>new developer</h1>
-<%= form_for @developer, :html => {:class => "film_form"} do |f| %>
-  Name: <%= f.association :name %>
-  Brand: <%= f.text_field :brand %>
-<% end %>
+<%= render partial: 'form', locals: { developer: @developer } %>
