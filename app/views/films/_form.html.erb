@@ -1,5 +1,7 @@
-<%= simple_form_for film, :html => {:class => "base_form film_form"} do |f| %>
+<%= simple_form_for film do |f| %>
   <%= f.input :name %>
   <%= f.input :brand %>
   <%= f.input :iso %>
+
+  <%= f.submit class: "btn" %>
 <% end %>

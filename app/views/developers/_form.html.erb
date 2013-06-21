@@ -1,4 +1,6 @@
-<%= simple_form_for developer, :html => {:class => "base_form developer_form"} do |f| %>
+<%= simple_form_for developer do |f| %>
   <%= f.input :name %>
   <%= f.input :brand %>
+
+  <%= f.submit class: "btn" %>
 <% end %>

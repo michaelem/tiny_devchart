@@ -23,6 +23,16 @@ h1 .focus {
   color: darkred;
 }
 
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+h2 .focus {
+  color: darkred;
+}
+
 .main {
   margin-left: auto;
   margin-right: auto;
