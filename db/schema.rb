@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428180417) do
+ActiveRecord::Schema.define(:version => 20130621113347) do
 
   create_table "developers", :force => true do |t|
     t.string   "name"
@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(:version => 20130428180417) do
     t.float    "temperature"
     t.integer  "film_id"
     t.integer  "developer_id"
-    t.string   "notes"
+    t.text     "notes",        :limit => 255
     t.integer  "rating"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "films", :force => true do |t|
