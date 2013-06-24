@@ -33,6 +33,14 @@ h2 .focus {
   color: darkred;
 }
 
+a {
+  color: darkred;
+}
+
+a:hover {
+  color: #7F0000;
+}
+
 .main {
   margin-left: auto;
   margin-right: auto;

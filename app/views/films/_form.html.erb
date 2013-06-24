@@ -1,7 +1,9 @@
 <%= simple_form_for film do |f| %>
-  <%= f.input :name %>
-  <%= f.input :brand %>
-  <%= f.input :iso %>
+  <%= f.input :name, placeholder: "TX-400" %>
+  <%= f.input :brand, placeholder: "Fuji" %>
+  <%= f.input :iso, placeholder: "200" %>
 
-  <%= f.submit class: "btn" %>
+  <div class="clearfix">
+    <%= f.submit class: "btn pull-right" %>
+  </div>
 <% end %>

@@ -2,6 +2,7 @@
   <div class="clearfix">
     <%= f.association :film, include_blank: false, input_html: { class: "film pull-right" }  %>
   </div>
+
   <div class="clearfix">
     <%= f.input :iso, placeholder: "100", input_html: { class: "iso pull-right" }  %>
   </div>
@@ -11,30 +12,37 @@
   <div class="clearfix">
     <%= f.association :developer, include_blank: false, input_html: { class: "developer pull-right" }  %>
   </div>
+
   <div class="clearfix">
     <%= f.input :dillution, placeholder: "H", input_html: { class: "dillution pull-right" }  %>
   </div>
+
   <div class="clearfix">
     <%= f.input :temperature,
                 placeholder: "20",
                 input_html: { class: "temperature pull-right" },
                 html: {class: "inline"} %>
   </div>
+
   <hr>
+
   <div class="clearfix">
     <%= f.input :seconds, placeholder: "300", input_html: { class: "time pull-right" }  %>
   </div>
+
   <hr>
+
   <div class="clearfix">
-    <%= f.input :rating, placeholder: "5", input_html: { class: "rating, pull-right" } %>
+    <%= f.input :rating, default: "3", input_html: { class: "rating, pull-right" } %>
   </div>
+
   <div class="clearfix">
-    <%= f.input :notes, input_html: { class: "pull-right" }  %>
+    <%= f.input :notes, input_html: { class: "pull-right", rows: "5" }  %>
   </div>
 
   <hr>
 
   <div class="clearfix">
-    <%= f.submit "Create", class: "btn pull-right" %>
+    <%= f.submit class: "btn pull-right" %>
   </div>
 <% end %>
