@@ -4,10 +4,10 @@ TinyDevchart::Application.routes.draw do
 
   resources :development_times do
   	collection do
-  		get 'search' 
+  		get 'search'
   	end
   end
 
-  resources :films, only: [:new, :create]
+  resources :films
   resources :developers, only: [:new, :create]
 end
