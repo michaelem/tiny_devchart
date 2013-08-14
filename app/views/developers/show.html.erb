@@ -1,0 +1,4 @@
+<h2><%= @developer.brand %> <%= @developer.name %></h2>
+
+<%= render partial: 'development_times/table',
+            locals: { development_times: @developer.development_times} %>

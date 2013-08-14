@@ -9,5 +9,5 @@ TinyDevchart::Application.routes.draw do
   end
 
   resources :films
-  resources :developers, only: [:new, :create]
+  resources :developers
 end
