@@ -1,5 +1,6 @@
 TinyDevchart::Application.routes.draw do
 
+  devise_for :users
   root :to => 'development_times#index'
 
   resources :development_times do

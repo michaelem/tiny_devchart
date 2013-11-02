@@ -1,8 +1,11 @@
 <div class="main">
 
-	<div class="clearfix">
-		<%= link_to "add a new time", :new_development_time, class: "table_add_link btn" %>
-	</div>
+  <% if user_signed_in? %>
+    <div class="clearfix">
+      <%= link_to "add a new time", :new_development_time, class: "table_add_link btn" %>
+    </div>
+  <% end %>
 
-	<%= render partial: 'table', locals: { development_times: @dev_times } %>
+
+  <%= render partial: 'table', locals: { development_times: @dev_times } %>
 </div>

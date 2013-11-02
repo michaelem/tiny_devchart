@@ -1,31 +1,32 @@
 <%= simple_form_for development_time do |f| %>
-  <div class="clearfix">
-    <%= f.association :film, include_blank: false, input_html: { class: "film pull-right" }  %>
+  <div>
+    <div class="clearfix">
+      <%= f.association :film, include_blank: false, input_html: { class: "film pull-right" }  %>
+    </div>
+
+    <div class="clearfix">
+      <%= f.input :iso, placeholder: "100", input_html: { class: "iso pull-right" }  %>
+    </div>
   </div>
 
-  <div class="clearfix">
-    <%= f.input :iso, placeholder: "100", input_html: { class: "iso pull-right" }  %>
+  <div>
+    <div class="clearfix">
+      <%= f.association :developer, include_blank: false, input_html: { class: "developer pull-right" }  %>
+    </div>
+
+    <div class="clearfix">
+      <%= f.input :dillution, placeholder: "1:63", input_html: { class: "dillution pull-right" }  %>
+    </div>
+
+    <div class="clearfix">
+      <%= f.input :temperature,
+                  placeholder: "20",
+                  input_html: { class: "temperature pull-right" },
+                  html: {class: "inline"} %>
+    </div>
   </div>
 
-  <hr>
-
-  <div class="clearfix">
-    <%= f.association :developer, include_blank: false, input_html: { class: "developer pull-right" }  %>
-  </div>
-
-  <div class="clearfix">
-    <%= f.input :dillution, placeholder: "1:63", input_html: { class: "dillution pull-right" }  %>
-  </div>
-
-  <div class="clearfix">
-    <%= f.input :temperature,
-                placeholder: "20",
-                input_html: { class: "temperature pull-right" },
-                html: {class: "inline"} %>
-  </div>
-
-  <hr>
-
+  <div
   <div class="clearfix">
     <%= f.input :seconds, placeholder: "300", input_html: { class: "time pull-right" }  %>
   </div>
