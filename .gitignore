@@ -16,3 +16,4 @@
 
 # Ignore some config files
 /config/database.yml
+/config/secrets.yml
