@@ -1,10 +1,9 @@
 <tr>
 	<td> <%= development_time.film.name %> </td>
-	<td> <%= development_time.iso %> </td>
+	<td class="align_right"> <%= development_time.iso %> </td>
 	<td> <%= development_time.developer.name %> </td>
-	<td> <%= development_time.dillution %> </td>
-	<td> <%= humanize development_time.seconds %> </td>
-	<td> <%= development_time.temperature %> </td>
-	<td> <%= development_time.notes %> </td>
-	<td> <%= development_time.rating %> </td>
+	<td class="align_right"> <%= development_time.dillution %> </td>
+	<td class="align_right"> <%= humanize development_time.seconds %> </td>
+	<td class="align_right"> <%= development_time.temperature %>&deg; </td>
+	<td class="align_right"> <%= development_time.rating %> </td>
 </tr>
