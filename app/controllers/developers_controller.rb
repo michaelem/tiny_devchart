@@ -4,7 +4,7 @@ class DevelopersController < ApplicationController
 	end
 
 	def create
-		@developer = Developer.new(params[:developer])
+		@developer = Developer.new(developer_params)
 
 		if @developer.save
 			redirect_to root_path
@@ -31,7 +31,7 @@ class DevelopersController < ApplicationController
 	end
 
 	private
-	developer_params
+	def developer_params
 		params.require(:developer).permit(:brand, :name)
 	end
 end

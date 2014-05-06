@@ -4,7 +4,7 @@ class FilmsController < ApplicationController
 	end
 
 	def create
-		@film = Film.new(params[:film])
+		@film = Film.new(film_params)
 		if @film.save
 			redirect_to :show
 		else
@@ -30,7 +30,7 @@ class FilmsController < ApplicationController
 	end
 
 	private
-	film_params
+	def film_params
 		params.require(:film).permit(:brand, :iso, :name)
 	end
 end

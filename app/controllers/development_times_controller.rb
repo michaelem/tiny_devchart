@@ -8,12 +8,12 @@ class DevelopmentTimesController < ApplicationController
 	end
 
 	def create
-		dev_time = DevelopmentTime.new(params[:development_time])
+		dev_time = DevelopmentTime.new( development_time_params )
 		dev_time.save
 	end
 
 	private
-	development_time_params
+	def development_time_params
 		params.require(:development_time).permit(:developer_id, :dillution, :film_id, :iso, :notes, :rating, :seconds, :temperature)
 	end
 end
