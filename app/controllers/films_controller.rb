@@ -28,4 +28,9 @@ class FilmsController < ApplicationController
 			render action:"edit"
 		end
 	end
+
+	private
+	film_params
+		params.require(:film).permit(:brand, :iso, :name)
+	end
 end
