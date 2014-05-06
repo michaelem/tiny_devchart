@@ -22,8 +22,5 @@ gem "twitter-bootstrap-rails"
 # Use unicorn as the app server
 gem 'unicorn'
 
-# Deploy with Capistrano
-gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+# For Heroku:
+gem 'rails_12factor', group: :production
