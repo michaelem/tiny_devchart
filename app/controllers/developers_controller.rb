@@ -29,5 +29,10 @@ class DevelopersController < ApplicationController
 			render action:"edit"
 		end
 	end
+
+	private
+	developer_params
+		params.require(:developer).permit(:brand, :name)
+	end
 end
 
