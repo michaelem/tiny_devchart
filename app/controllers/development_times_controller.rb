@@ -12,6 +12,8 @@ class DevelopmentTimesController < ApplicationController
 		dev_time.save
 	end
 
-	def search
+	private
+	development_time_params
+		params.require(:development_time).permit(:developer_id, :dillution, :film_id, :iso, :notes, :rating, :seconds, :temperature)
 	end
 end
