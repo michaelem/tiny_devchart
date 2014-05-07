@@ -1,10 +1,16 @@
 class FilmsController < ApplicationController
+	before_filter :set_film, only: [:show, :edit, :update]
+	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
+
 	def new
 		@film = Film.new
+		authorize @film
 	end
 
 	def create
-		@film = Film.new(film_params)
+		@film = Film.new( film_params )
+		authorize @film
+
 		if @film.save
 			redirect_to film_path( @film )
 		else
@@ -13,15 +19,15 @@ class FilmsController < ApplicationController
 	end
 
 	def show
-		@film = Film.find(params[:id])
 	end
 
 	def edit
-		@film = Film.find(params[:id])
+		authorize @film
 	end
 
 	def update
-		@film = Film.find(params[:id])
+		authorize @film
+
 		if @film.save
 			redirect_to film_path(@film)
 		else
@@ -32,5 +38,9 @@ class FilmsController < ApplicationController
 	private
 	def film_params
 		params.require(:film).permit(:brand, :iso, :name)
+	end
+
+	def set_film
+		@film = Film.find( params[:id] )
 	end
 end
