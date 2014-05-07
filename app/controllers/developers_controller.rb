@@ -1,11 +1,15 @@
 class DevelopersController < ApplicationController
 	before_filter :set_developer, only: [:show, :edit, :update]
+	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
+
 	def new
 		@developer = Developer.new
+		authorize @developer
 	end
 
 	def create
 		@developer = Developer.new(developer_params)
+		authorize @developer
 
 		if @developer.save
 			redirect_to developer_path(@developer)
@@ -18,9 +22,12 @@ class DevelopersController < ApplicationController
 	end
 
 	def edit
+		authorize @developer
 	end
 
 	def update
+		authorize @developer
+
 		if @developer.save!
 			redirect_to developer_path(@developer)
 		else
