@@ -5,10 +5,11 @@
 .dev_time_table {
   text-align: left;
   width: 100%;
-  color: #7F7F7F;
+  color: #AAAAAA;
 }
 
 .dev_time_table th {
+  font-size: 0.9em;
   padding-right: 1em;
   color: darkred;
   padding-bottom: 0.75em;
@@ -16,8 +17,8 @@
 
 .dev_time_table td {
   padding-right: 1em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  padding-top: 0.35em;
+  padding-bottom: 0.35em;
 }
 
 .dev_time_table tr:hover {
@@ -79,6 +80,10 @@
 
 .align_right {
   text-align: right;
+}
+
+.align_center {
+  text-align: center;
 }
 
 
