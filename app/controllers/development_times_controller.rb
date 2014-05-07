@@ -1,4 +1,6 @@
 class DevelopmentTimesController < ApplicationController
+	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
+
 	def index
 		@development_times = DevelopmentTime.all
 	end
