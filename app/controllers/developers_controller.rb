@@ -1,4 +1,5 @@
 class DevelopersController < ApplicationController
+	before_filter :set_developer, only: [:show, :edit, :update]
 	def new
 		@developer = Developer.new
 	end
@@ -14,15 +15,12 @@ class DevelopersController < ApplicationController
 	end
 
 	def show
-		@developer = Developer.find(params[:id])
 	end
 
 	def edit
-		@developer = Developer.find(params[:id])
 	end
 
 	def update
-		@developer = Developer.find(params[:id])
 		if @developer.save!
 			redirect_to developer_path(@developer)
 		else
@@ -33,6 +31,10 @@ class DevelopersController < ApplicationController
 	private
 	def developer_params
 		params.require(:developer).permit(:brand, :name)
+	end
+
+	def set_developer
+		@developer = Developer.find( params[:id] )
 	end
 end
 
