@@ -6,9 +6,9 @@ class FilmsController < ApplicationController
 	def create
 		@film = Film.new(film_params)
 		if @film.save
-			redirect_to :show
+			redirect_to film_path( @film )
 		else
-			render action:"new"
+			render action: :new
 		end
 	end
 
@@ -25,7 +25,7 @@ class FilmsController < ApplicationController
 		if @film.save
 			redirect_to film_path(@film)
 		else
-			render action:"edit"
+			render action: :edit
 		end
 	end
 

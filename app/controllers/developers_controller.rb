@@ -7,9 +7,9 @@ class DevelopersController < ApplicationController
 		@developer = Developer.new(developer_params)
 
 		if @developer.save
-			redirect_to root_path
+			redirect_to developer_path(@developer)
 		else
-			render action:"new"
+			render action: :new
 		end
 	end
 
@@ -26,7 +26,7 @@ class DevelopersController < ApplicationController
 		if @developer.save!
 			redirect_to developer_path(@developer)
 		else
-			render action:"edit"
+			render action: :edit
 		end
 	end
 

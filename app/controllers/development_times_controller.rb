@@ -1,15 +1,23 @@
 class DevelopmentTimesController < ApplicationController
 	def index
-		@dev_times = DevelopmentTime.all
+		@development_times = DevelopmentTime.all
 	end
 
 	def new
-		@dev_time = DevelopmentTime.new
+		@development_time = DevelopmentTime.new
 	end
 
 	def create
-		dev_time = DevelopmentTime.new( development_time_params )
-		dev_time.save
+		@development_time = DevelopmentTime.new( development_time_params )
+		if @development_time.save
+			redirect_to development_times_path
+		else
+			render action: :edit
+		end
+	end
+
+	def edit
+		@development_time = DevelopmentTime.find( params[:id] )
 	end
 
 	private
