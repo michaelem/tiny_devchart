@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= film.brand %>
+  </td>
+  <td>
+    <%= link_to film.name, film_path( film ) %>
+  </td>
+  <td>
+    <%= film.development_times.count %>
+  </td>
+  <td class="align_right">
+    <%= link_to 'edit', edit_film_path( film ) %>
+  </td>
+</tr>

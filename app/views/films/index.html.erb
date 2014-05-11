@@ -1,0 +1,27 @@
+<hr>
+
+<div class="table_wraper">
+  <table class="dev_time_table">
+    <thead>
+      <tr>
+        <th>brand</th>
+        <th>name</th>
+        <th>ISO</th>
+        <th>recipie count</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @films %>
+    </tbody>
+  </table>
+<div>
+
+<hr>
+
+<% if user_signed_in? %>
+  <div class="clearfix">
+    <%= link_to "add a new film", :new_film, class: "table_add_link btn" %>
+  </div>
+<% end %>

@@ -2,6 +2,11 @@ class FilmsController < ApplicationController
 	before_filter :set_film, only: [:show, :edit, :update]
 	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
 
+	def index
+		@films = Film.all
+		authorize @films
+	end
+
 	def new
 		@film = Film.new
 		authorize @film
