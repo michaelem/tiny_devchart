@@ -1,7 +1,7 @@
 <tr>
-	<td> <%= development_time.film.name %> </td>
+	<td> <%= link_to development_time.film.name, film_path( development_time.film ) %> </td>
 	<td class="align_right"> <%= development_time.iso %> </td>
-	<td> <%= development_time.developer.name %> </td>
+	<td> <%= link_to development_time.developer.name, developer_path( development_time.developer )  %> </td>
 	<td class="align_center"> <%= development_time.dillution %> </td>
 	<td class="align_center"> <%= humanize development_time.seconds %> </td>
 	<td class="align_center"> <%= development_time.temperature %>&deg;C </td>
