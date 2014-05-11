@@ -1,6 +1,6 @@
 class DevelopersController < ApplicationController
 	before_filter :set_developer, only: [:show, :edit, :update]
-	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
+	before_filter :authenticate_user!, only: [:index, :new, :create, :edit, :update]
 
 	def index
 		@developers = Developer.all
