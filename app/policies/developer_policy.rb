@@ -3,6 +3,10 @@ class DeveloperPolicy < ApplicationPolicy
     user.admin?
   end
 
+  def index?
+    create?
+  end
+
   def update?
     user.admin?
   end

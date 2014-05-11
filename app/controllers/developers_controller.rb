@@ -2,6 +2,11 @@ class DevelopersController < ApplicationController
 	before_filter :set_developer, only: [:show, :edit, :update]
 	before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
 
+	def index
+		@developers = Developer.all
+		authorize @developers
+	end
+
 	def new
 		@developer = Developer.new
 		authorize @developer

@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= developer.brand %>
+  </td>
+  <td>
+    <%= link_to developer.name, developer_path( developer ) %>
+  </td>
+  <td>
+    <%= developer.development_times.count %>
+  </td>
+  <td class="align_right">
+    <%= link_to 'edit', edit_developer_path( developer ) %>
+  </td>
+</tr>
